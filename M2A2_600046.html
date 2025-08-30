@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        .der {
+            padding-left: 5px;
+            padding-bottom: 3px;
+            padding-top: 3px;
+            padding-right: 6px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <h2>Registro para un Torneo de Videojuegos</h2>
+            <tr>
+                <td>
+                    Nombre del Jugador:
+                </td>
+                <td class="der">
+                    <input type="text" required minlength="3" required maxlength="15"> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Correo:
+                </td>
+                <td class="der">
+                    <input type="email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Edad: 
+                </td>
+                <td class="der">
+                    <input type="number" required min="12" max="40">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nickname:
+                </td>
+                <td class="der">
+                    <input type="text" pattern="^([A-Za-z]|[0-9])+$">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Categoría
+                </td>
+                <td class="der">
+                    <input type="radio" id="principiante" name="cat" required/>Principiante
+                    <input type="radio" id="intermedio" name="cat"/>Intermedio
+                    <input type="radio" id="experto" name="cat"/>Experto
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Juegos favoritos
+                </td>
+                <td class="der"> 
+                    <input type="checkbox" id="fifa"/>FIFA
+                    <input type="checkbox" id="lol"/>LoL
+                    <input type="checkbox" id="minecraft"/>Minecraft
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Fecha Inscripción
+                </td>
+                <td class="der">
+                    <input type="date" min="2025-01-01" max="2025-12-31" required>
+                </td>
+            </tr>
+            <tr style="text-align: center;">
+                <td colspan="2" style="padding: 5px;">
+                    <button>Enviar</button>
+                    <button>Restablecer</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
